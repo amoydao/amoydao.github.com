@@ -45,7 +45,7 @@
 <meta property="og:url" content="http://yoursite.com/2015/10/01/hexo-blog/index.html">
 <meta property="og:site_name" content="陈友道 CnYod">
 <meta property="og:description" content="用hexo快速搭建个人博客。">
-<meta property="og:updated_time" content="2015-09-30T17:09:58.000Z">
+<meta property="og:updated_time" content="2015-09-30T17:53:56.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="用hexo搭建blog">
 <meta name="twitter:description" content="用hexo快速搭建个人博客。">
@@ -233,10 +233,10 @@
       
 
       
-        <span itemprop="articleBody"><h1 id="环境准备">环境准备</h1><p><a href="http://git-scm.com/" target="_blank" rel="external">git</a><br><a href="https://nodejs.org/en/" target="_blank" rel="external">node.js</a><br><a href="http://www.sublimetext.com/" target="_blank" rel="external">sublime text</a></p>
+        <span itemprop="articleBody"><h1 id="环境准备">环境准备</h1><p>安装 <a href="http://git-scm.com/" target="_blank" rel="external">git</a><br>安装 <a href="https://nodejs.org/en/" target="_blank" rel="external">node.js</a><br>安装 <a href="http://www.sublimetext.com/" target="_blank" rel="external">sublime text</a><br>安装 hexo：（Git Bash） <code>$ npm install -g hexo-cli</code></p>
 <p>#博客安装<br>1.新建博客文件夹（可建在U盘里）<br>2.在该文件夹上右键运行Git Bash，安装hexo</p>
 <blockquote>
-<p>$ npm install -g hexo-cli<br>$ npm install hexo –save<br>$ hexo init<br>$ npm install</p>
+<p>$ npm install hexo –save<br>$ hexo init<br>$ npm install</p>
 </blockquote>
 <p>3.查看结果</p>
 <blockquote>
@@ -252,7 +252,13 @@
 </blockquote>
 <p>并访问 <a href="http://localhost:4000" target="_blank" rel="external">http://localhost:4000</a> ，确保站点正确运行</p>
 <p>#设置主题/站点/插件<br><a href="http://theme-next.iissnan.com/five-minutes-setup.html" target="_blank" rel="external">5分钟快速安装</a></p>
-<h1 id="发布到Github">发布到Github</h1><h1 id="个人域名">个人域名</h1><h1 id="写文章">写文章</h1></span>
+<h1 id="发布到Github">发布到Github</h1><p>部署前需要配置_config.yml文件。<br>deploy:<br>  type: github<br>  repository: <a href="https://github.com/amoydao/amoydao.github.io.git" target="_blank" rel="external">https://github.com/amoydao/amoydao.github.io.git</a>  #在第二步中你创建的GitHub仓库(repository)路径<br>  brach: master<br>之后执行下列指令即可完成部署，注意部署会覆盖掉你之前在版本库中存放的文件。</p>
+<blockquote>
+<p>$ hexo clean  # 清空<br>$ hexo g  # 本地部署，生成静态页面至hexo\public\目录<br>$ hexo s # 启动本地服务，进行文章预览调试，<a href="http://localhost:4000" target="_blank" rel="external">http://localhost:4000</a><br>$ hexo d # 发布到GitHub上，需要根据提示输入账号和密码</p>
+</blockquote>
+<p><strong>注意：</strong>命令必须在init目录下执行，否则不成功，但是也不报错。</p>
+<p>若遇到问题：<br><strong>hexo ERROR</strong>: Deployer not found: github<br>1.安装 npm install hexo-deployer-git –save<br>2.将deploy 的 type由github改为git</p>
+<h1 id="个人域名">个人域名</h1><h1 id="写文章">写文章</h1></span>
       
     </div>
 
