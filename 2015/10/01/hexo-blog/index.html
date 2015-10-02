@@ -30,7 +30,7 @@
 
 
 
-  <meta name="keywords" content="Blog,Hexo," />
+  <meta name="keywords" content="GitHub,Hexo," />
 
 
 
@@ -39,16 +39,25 @@
   <link rel="shorticon icon" type="image/x-icon" href="/favicon.ico?v=0.4.5.1" />
 
 
-<meta name="description" content="用hexo快速搭建个人博客。">
+<meta name="description" content="用hexo+GitHub+Godaddy+Dnspod快速搭建个人博客在U盘上。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="用hexo搭建blog">
+<meta property="og:title" content="用hexo+GitHub快速搭建个人博客">
 <meta property="og:url" content="http://yoursite.com/2015/10/01/hexo-blog/index.html">
 <meta property="og:site_name" content="陈友道 CnYod">
-<meta property="og:description" content="用hexo快速搭建个人博客。">
-<meta property="og:updated_time" content="2015-09-30T17:53:56.000Z">
+<meta property="og:description" content="用hexo+GitHub+Godaddy+Dnspod快速搭建个人博客在U盘上。">
+<meta property="og:image" content="http://7vzshh.com1.z0.glb.clouddn.com/个人博客概述2.jpg">
+<meta property="og:image" content="http://7vzshh.com1.z0.glb.clouddn.com/QQ图片20150304234029.png">
+<meta property="og:image" content="http://7vzshh.com1.z0.glb.clouddn.com/QQ图片20150304234501.png">
+<meta property="og:image" content="http://7vzshh.com1.z0.glb.clouddn.com/ssh-key-set.png">
+<meta property="og:image" content="http://7vzshh.com1.z0.glb.clouddn.com/QQ图片20150304232408.png">
+<meta property="og:image" content="http://7vzshh.com1.z0.glb.clouddn.com/QQ图片20150304232629.png">
+<meta property="og:image" content="http://7vzshh.com1.z0.glb.clouddn.com/dnspod.jpg">
+<meta property="og:image" content="http://7vzshh.com1.z0.glb.clouddn.com/godaddy1.jpg">
+<meta property="og:image" content="http://7vzshh.com1.z0.glb.clouddn.com/godaddy2.jpg">
+<meta property="og:updated_time" content="2015-10-02T08:20:14.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="用hexo搭建blog">
-<meta name="twitter:description" content="用hexo快速搭建个人博客。">
+<meta name="twitter:title" content="用hexo+GitHub快速搭建个人博客">
+<meta name="twitter:description" content="用hexo+GitHub+Godaddy+Dnspod快速搭建个人博客在U盘上。">
 
 
 <script type="text/javascript" id="hexo.configuration">
@@ -58,7 +67,7 @@
   };
 </script>
 
-  <title> 用hexo搭建blog | 陈友道 CnYod </title>
+  <title> 用hexo+GitHub快速搭建个人博客 | 陈友道 CnYod </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -183,7 +192,7 @@
           
           
             
-              用hexo搭建blog
+              用hexo+GitHub快速搭建个人博客
             
           
         </h1>
@@ -233,32 +242,117 @@
       
 
       
-        <span itemprop="articleBody"><h1 id="环境准备">环境准备</h1><p>安装 <a href="http://git-scm.com/" target="_blank" rel="external">git</a><br>安装 <a href="https://nodejs.org/en/" target="_blank" rel="external">node.js</a><br>安装 <a href="http://www.sublimetext.com/" target="_blank" rel="external">sublime text</a><br>安装 hexo：（Git Bash） <code>$ npm install -g hexo-cli</code></p>
-<p>#博客安装<br>1.新建博客文件夹（可建在U盘里）<br>2.在该文件夹上右键运行Git Bash，安装hexo</p>
-<blockquote>
-<p>$ npm install hexo –save<br>$ hexo init<br>$ npm install</p>
-</blockquote>
-<p>3.查看结果</p>
-<blockquote>
-<p>$ hexo s</p>
-</blockquote>
-<h1 id="安装主题">安装主题</h1><p>主题推荐单：<a href="http://www.zhihu.com/question/24422335" target="_blank" rel="external">有那些好看的hexo主题?</a><br>使用主题：<a href="https://github.com/iissnan/hexo-theme-next" target="_blank" rel="external">iissnan/hexo-theme-next</a><br>克隆安装：</p>
-<blockquote>
-<p>$ git clone <a href="https://github.com/iissnan/hexo-theme-next" target="_blank" rel="external">https://github.com/iissnan/hexo-theme-next</a> themes/next</p>
-</blockquote>
-<p>启用主题：打开 站点配置文件，找到 theme 字段，并将其值更改为 next<br>验证主题：</p>
-<blockquote>
-<p>$ hexo s –debug</p>
-</blockquote>
-<p>并访问 <a href="http://localhost:4000" target="_blank" rel="external">http://localhost:4000</a> ，确保站点正确运行</p>
-<p>#设置主题/站点/插件<br><a href="http://theme-next.iissnan.com/five-minutes-setup.html" target="_blank" rel="external">5分钟快速安装</a></p>
-<h1 id="发布到Github">发布到Github</h1><p>部署前需要配置_config.yml文件。<br>deploy:<br>  type: github<br>  repository: <a href="https://github.com/amoydao/amoydao.github.io.git" target="_blank" rel="external">https://github.com/amoydao/amoydao.github.io.git</a>  #在第二步中你创建的GitHub仓库(repository)路径<br>  brach: master<br>之后执行下列指令即可完成部署，注意部署会覆盖掉你之前在版本库中存放的文件。</p>
-<blockquote>
-<p>$ hexo clean  # 清空<br>$ hexo g  # 本地部署，生成静态页面至hexo\public\目录<br>$ hexo s # 启动本地服务，进行文章预览调试，<a href="http://localhost:4000" target="_blank" rel="external">http://localhost:4000</a><br>$ hexo d # 发布到GitHub上，需要根据提示输入账号和密码</p>
-</blockquote>
-<p><strong>注意：</strong>命令必须在init目录下执行，否则不成功，但是也不报错。</p>
-<p>若遇到问题：<br><strong>hexo ERROR</strong>: Deployer not found: github<br>1.安装 npm install hexo-deployer-git –save<br>2.将deploy 的 type由github改为git</p>
-<h1 id="个人域名">个人域名</h1><h1 id="写文章">写文章</h1></span>
+        <span itemprop="articleBody"><p><img src="http://7vzshh.com1.z0.glb.clouddn.com/个人博客概述2.jpg" alt="cnyod的个人博客"></p>
+<h1 id="开始之前：在GitHub上建立博客空间">开始之前：在GitHub上建立博客空间</h1><ul>
+<li><strong>注册GitHub账号</strong>：访问<a href="https://github.com" target="_blank" rel="external">github.com</a>，注册登录</li>
+<li><strong>创建博客空间</strong>：<br>GitHub Pages分两种，一种是你的GitHub用户名建立的<code>username.github.io</code>这样的用户&amp;组织页（站），另一种是依附项目的pages。<strong>想建立个人博客是用的第一种</strong>，每个用户名下面只能建立一个。<br>1.登录到<a href="https://github.com" target="_blank" rel="external">GitHub</a>的个人主页，右上角处点击「+」—&gt;「New repository」。<br><img src="http://7vzshh.com1.z0.glb.clouddn.com/QQ图片20150304234029.png" alt=""><br>2.填写你的项目名，如<code>cnyod.github.io</code>，和描述信息（可选），点击「Create Repository」 完成创建。<br><img src="http://7vzshh.com1.z0.glb.clouddn.com/QQ图片20150304234501.png" alt=""></li>
+</ul>
+<hr>
+<h1 id="一、环境准备">一、环境准备</h1><h2 id="1-程序安装">1.程序安装</h2><ul>
+<li><strong>安装 <a href="http://git-scm.com/" target="_blank" rel="external">git</a></strong></li>
+<li><strong>安装 <a href="https://nodejs.org/en/" target="_blank" rel="external">node.js</a></strong></li>
+<li><strong>安装 <a href="http://www.sublimetext.com/" target="_blank" rel="external">sublime text</a></strong></li>
+<li><strong>安装 hexo</strong>（运行Git Bash） ：<pre><code>$ npm <span class="operator"><span class="keyword">install</span> -<span class="keyword">g</span> hexo-cli</span>
+</code></pre></li>
+</ul>
+<h2 id="2-配置SSH_keys公钥">2.配置SSH  keys公钥</h2><p>运行Git Bash，建立本地与远程的github的联系</p>
+<ul>
+<li><strong>设置用户名密码</strong><pre><code>$ git config --<span class="keyword">global</span> user.email  <span class="string">"amoydao@qq.com"</span>    <span class="preprocessor">#你的邮箱</span>
+$ git config --<span class="keyword">global</span> user.name  <span class="string">"amoydao"</span>   <span class="preprocessor">#你的用户名</span>
+</code></pre></li>
+<li><strong>生成密钥</strong><pre><code><span class="variable">$ </span>ssh-keygen -t rsa -<span class="constant">C </span><span class="string">"bu.ru@qq.com"</span>   <span class="comment">#你的邮箱</span>
+</code></pre>然后系统会出现一些代码，按回车键，使用默认配置就好。<pre><code>Generating <span class="keyword">public</span>/<span class="keyword">private</span> rsa <span class="keyword">key</span> pair.
+Enter file <span class="keyword">in</span> which <span class="keyword">to</span> save the <span class="keyword">key</span> (/Users/your_user_directory/.ssh/id_rsa):  <span class="preprocessor">#回车就好</span>
+</code></pre>然后系统会要你输入你的GitHub密码：<pre><code>Enter passphrase (empty <span class="keyword">for</span> <span class="literal">no</span> passphrase):  <span class="comment">#输入密码</span>
+Enter same passphrase <span class="attribute">again</span>:  <span class="comment">#再次输入密码</span>
+</code></pre>注意：输入密码的时候没有*字样的，你直接输入就可以了。<br>最后看到这样的界面，就成功设置ssh key了：<br><img src="http://7vzshh.com1.z0.glb.clouddn.com/ssh-key-set.png" alt=""></li>
+<li><strong>添加SSH Key到GitHub</strong><br>在本机设置SSH Key之后，需要添加到GitHub上，以完成SSH链接的设置。<br>1）到C:/Users/your_user_directory/.ssh（比如C:\Users\amoydao.ssh）中，用文本编辑工具打开id_rsa.pub文件，全选复制里面的代码。如果看不到这个文件，你需要设置显示隐藏文件。<br>2）登录到<a href="https://github.com" target="_blank" rel="external">GitHub</a>的个人主页，右上角处点击「设置按钮/Settings」—&gt;选择「SSH keys」—&gt;点击「Add SSH Key」，把复制的内容粘贴进去，然后点击Add Key按钮即可。<br><img src="http://7vzshh.com1.z0.glb.clouddn.com/QQ图片20150304232408.png" alt=""><br><img src="http://7vzshh.com1.z0.glb.clouddn.com/QQ图片20150304232629.png" alt=""></li>
+<li><strong>测试一下</strong><br>在Git上输入下面的命令，看看设置是否成功，<code>git@github.com</code>的部分不要修改：<pre><code><span class="variable">$ </span>ssh -<span class="constant">T</span> git<span class="variable">@github</span>.com
+</code></pre>系统会反馈：<pre><code>The authenticity <span class="keyword">of</span> host <span class="comment">'github.com (207.97.227.239)' can't be established.</span>
+RSA <span class="keyword">key</span> fingerprint <span class="keyword">is</span> <span class="number">16</span>:<span class="number">27</span>:ac:a5:<span class="number">76</span>:<span class="number">28</span>:<span class="number">2</span>d:<span class="number">36</span>:<span class="number">63</span>:<span class="number">1</span>b:<span class="number">56</span>:<span class="number">4</span>d:eb:df:a6:<span class="number">48.</span>
+Are you sure you want <span class="keyword">to</span> <span class="keyword">continue</span> connecting (yes/no)?
+</code></pre>输入yes就好，然后会看到：<pre><code>Hi &lt;em&gt;username&lt;/em&gt;! You've successfully authenticated, <span class="keyword">but</span> GitHub <span class="keyword">does</span> <span class="keyword">not</span> provide shell access.
+</code></pre>配置成功，你已经可以通过SSH链接到GitHub了。</li>
+</ul>
+<hr>
+<h1 id="二、安装HEXO">二、安装HEXO</h1><ul>
+<li><strong>新建博客文件夹</strong>：英文路径，可建在U盘里。</li>
+<li><strong>安装hexo</strong>（在该文件夹上右键运行Git Bash）<pre><code><span class="variable">$ </span>npm install hexo --save
+<span class="variable">$ </span>hexo init 
+<span class="variable">$ </span>npm install
+</code></pre></li>
+<li><strong>生成预览</strong><pre><code><span class="variable">$ </span>hexo s
+</code></pre></li>
+<li><strong>访问</strong> <a href="http://localhost:4000" target="_blank" rel="external">http://localhost:4000</a></li>
+</ul>
+<hr>
+<h1 id="三、安装主题">三、安装主题</h1><ul>
+<li><strong>挑选模板</strong>：<a href="http://www.zhihu.com/question/24422335" target="_blank" rel="external">有那些好看的hexo主题?</a></li>
+<li><strong>使用主题</strong>：<a href="https://github.com/iissnan/hexo-theme-next" target="_blank" rel="external">iissnan/hexo-theme-next</a></li>
+<li><strong>克隆安装</strong>：<pre><code>$ git clone http<span class="variable">s:</span>//github.<span class="keyword">com</span>/iissnan/hexo-theme-<span class="keyword">next</span> themes/<span class="keyword">next</span>
+</code></pre></li>
+<li><strong>启用主题</strong>：打开 站点配置文件<code>_config.yml</code>，找到 <code>theme</code> 字段，并将其值更改为 <code>next</code>。</li>
+<li><strong>生成预览</strong>：<pre><code><span class="variable">$ </span>hexo s
+</code></pre></li>
+<li><strong>访问</strong> <a href="http://localhost:4000" target="_blank" rel="external">http://localhost:4000</a> ，确保站点正确运行</li>
+</ul>
+<hr>
+<h1 id="四、设置主题/站点/插件">四、设置主题/站点/插件</h1><p>参考：<a href="http://theme-next.iissnan.com/five-minutes-setup.html" target="_blank" rel="external">5分钟快速安装</a></p>
+<hr>
+<h1 id="五、发布到Github">五、发布到Github</h1><ul>
+<li><strong>部署前需要配置<code>_config.yml</code>文件。</strong><pre><code><span class="string">deploy:</span>
+<span class="string">type:</span> github
+<span class="string">repository:</span> <span class="string">https:</span><span class="comment">//github.com/amoydao/amoydao.github.io.git  #在第二步中你创建的GitHub仓库(repository)路径</span>
+<span class="string">brach:</span> master 
+</code></pre></li>
+<li><strong>执行指令完成部署</strong>，注意部署会覆盖掉你之前在版本库中存放的文件。<pre><code><span class="variable">$ </span>hexo clean  <span class="comment"># 清空</span>
+<span class="variable">$ </span>hexo g  <span class="comment"># 本地部署，生成静态页面至hexo\public\目录</span>
+<span class="variable">$ </span>hexo s <span class="comment"># 启动本地服务，进行文章预览调试，http://localhost:4000</span>
+<span class="variable">$ </span>hexo d <span class="comment"># 发布到GitHub上，需要根据提示输入账号和密码</span>
+</code></pre><strong>注意：</strong>命令必须在init目录下执行，否则不成功，但是也不报错。</li>
+<li><strong>可能会出现该问题</strong><pre><code><span class="keyword">*</span><span class="keyword">*</span>hexo ERROR<span class="keyword">*</span><span class="keyword">*</span>: Deployer not found: github
+</code></pre>解决方法：<br>1.安装 npm install hexo-deployer-git –save<br>2.将deploy 的 type由github改为git</li>
+</ul>
+<hr>
+<h1 id="六、个人域名">六、个人域名</h1><h2 id="1-_购买域名">1. 购买域名</h2><ul>
+<li>购买国内域名商的域名需要备案，据说还各种限制，就根据推荐上国外的<a href="https://www.godaddy.com/" target="_blank" rel="external">Godaddy</a>购买，可以使用支付宝。<br>搜你想要的域名—&gt;根据引导完成支付，详细操作就不一一述说。附加收费服务不要管。在支付时可以上网搜godaddy的优惠码，省点钱。</li>
+</ul>
+<h2 id="2-_绑定域名">2. 绑定域名</h2><ul>
+<li><strong>设置Dnspod</strong><br>流传Godaddy的域名解析服务器被墙掉，导致域名无法访问，因此需要把域名解析服务迁移到国内比较稳定的服务商处，这个迁移对于域名来说没有什么风险，最终的控制权还是在Godaddy那里，你随时都可以改回去。<br>这里选择<a href="https://www.dnspod.cn/" target="_blank" rel="external">DNSPod</a>的服务。<br>1）登录注册并添加域名记录，可参考DNSPod的帮助文档：<a href="https://www.dnspod.cn/Support" target="_blank" rel="external">https://www.dnspod.cn/Support</a><br>2）在DNSPod自己的域名下进行设置，如下图：<br><img src="http://7vzshh.com1.z0.glb.clouddn.com/dnspod.jpg" alt="Dnspod设置"><br>两条<code>A记录</code>：192.30.252.153和192.30.252.154<br>一条<code>cname记录</code>：你在github注册的仓库<br><strong>注意：</strong>如博客不能登录，有可能是github更改了空间服务的ip地址，记得及时到在<a href="https://help.github.com/articles/my-custom-domain-isn-t-working/" target="_blank" rel="external">GitHub Pages</a>查看最新的ip即可。</li>
+<li><strong>设置 GitHub</strong><br>需要在博客文件根目录\source下，新建一个命名为<code>CNAME</code>的文件（不带后缀），在里面写你要绑定的独立域名，如<code>cnyod.com</code>，并用Git部署到GitHub上。<br><strong>建议参考<a href="https://help.github.com/articles/setting-up-a-custom-domain-with-github-pages/" target="_blank" rel="external">github pages关于域名绑定的帮助文档</a>，先在GitHub上直接创建CNAME文件，再下载放置在source文件夹里。</strong></li>
+<li><strong>设置Godaddy</strong><br>登录<a href="https://www.godaddy.com/" target="_blank" rel="external">Godaddy</a>—&gt;点击管理我的域名<br><img src="http://7vzshh.com1.z0.glb.clouddn.com/godaddy1.jpg" alt=""><br>修改Nameservers为这两个地址：f1g1ns1.dnspod.net、f1g1ns2.dnspod.net。<br><img src="http://7vzshh.com1.z0.glb.clouddn.com/godaddy2.jpg" alt=""><br>详细可以参考Dnspod的帮助文档：<a href="https://support.dnspod.cn/Kb/showarticle/tsid/42/" target="_blank" rel="external"><br>Godaddy注册商域名修改DNS地址</a></li>
+</ul>
+<hr>
+<h1 id="七、写文章">七、写文章</h1><ul>
+<li><p><strong>新建文章</strong><br>在hexo文件夹上打开Git，执行如下命令，发表新文章。</p>
+<pre><code><span class="variable">$ </span>hexo n <span class="string">"postName"</span>   <span class="comment">#新建文章。postname文章文件的命名，不是文章标题。</span>
+</code></pre><p>执行命令后，会在项目\source_posts中生成my new post.md文件，用编辑器打开编写即可。<br>当然，也可以直接在\source_posts中新建一个md文件。<br><strong>注意：</strong>建议用<a href="http://www.sublimetext.com/" target="_blank" rel="external">Sublime Text</a>编写md文件，否者默认的文本编辑器可能会导致中文乱码现象。</p>
+</li>
+<li><p><strong>用Markdown语法写文章</strong><br>建议按此标准语法写：</p>
+<pre><code>title: postName <span class="preprocessor">#文章页面上的显示名称，可以任意修改，不会出现在URL中</span>
+date: <span class="number">2013</span>-<span class="number">12</span>-<span class="number">02</span> <span class="number">15</span>:<span class="number">30</span>:<span class="number">16</span> <span class="preprocessor">#文章生成时间，一般不改，当然也可以任意修改</span>
+categories: example <span class="preprocessor">#分类</span>
+tags: [tag1,tag2,tag3] <span class="preprocessor">#文章标签，可空，多标签请用格式，注意:后面有个空格</span>
+description: <span class="preprocessor">#附加一段文章摘要，字数最好在<span class="number">140</span>字以内。</span>
+--- 
+<span class="preprocessor">#以下正文 </span>
+</code></pre></li>
+</ul>
+<p>关于MD语法，请看这里：<br>[1] <a href="http://jianshu.io/p/q81RER" target="_blank" rel="external">献给写作者的 Markdown 新手指南</a><br>[2] <a href="http://www.markdown.cn/" target="_blank" rel="external">Markdown语法说明</a><br>推荐使用<a href="http://www.jianshu.com/" target="_blank" rel="external">简书</a>写文章，支持Markdown语法，并可实时在线预览，非常方便。<br>我是先在简书上写完后，再把内容直接复制到Hexo的MD文件里发布。</p>
+<ul>
+<li><strong>上传文章</strong><br>写完后，在Hexo文件夹右键打开Git，执行如下命令，推送到服务器上：<pre><code><span class="title">hexo</span> clean  <span class="comment">#清理一下本地文件，以免出现一些诡异的情况</span>
+hexo g  <span class="comment">#生成在本地</span>
+hexo d  <span class="comment">#部署到GitHub</span>
+</code></pre></li>
+</ul>
+<hr>
+<h1 id="八、进阶设置">八、进阶设置</h1><ul>
+<li><strong>图床</strong><br>用的是<a href="http://www.qiniu.com/" target="_blank" rel="external">七牛云储存</a></li>
+<li>更多<br>这里就不一一详述了。</li>
+</ul>
+<hr>
+<h1 id="九、相关链接">九、相关链接</h1><p>[1] <a href="http://hexo.io/docs/" target="_blank" rel="external">Hexo官方介绍文档</a> 手把手教你做博客。<br>[2] <a href="https://github.com/hexojs/hexo/wiki/Plugins" target="_blank" rel="external">Hexo插件大全</a><br>[3] <a href="https://pages.github.com/" target="_blank" rel="external">GitHub Pages主页</a><br>[4] <a href="http://www.godaddy.com/" target="_blank" rel="external">godaddy域名商</a><br>[5] <a href="http://cnfeat.com/2014/05/10/2014-05-11-how-to-build-a-blog/www.dnspod.cn" target="_blank" rel="external">DNSPOD</a><br>[6] <a href="http://hexo.io/" target="_blank" rel="external">Hexo官方主页</a><br>[7] <a href="http://www.worldhello.net/gotgithub/index.html" target="_blank" rel="external">GotGitHub：GitHub介绍</a><br>[8] <a href="http://www.faviconer.com/" target="_blank" rel="external">图标制作网站：faviconer</a></p>
+</span>
       
     </div>
 
@@ -266,7 +360,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Blog/" rel="tag">#Blog</a>
+            <a href="/tags/GitHub/" rel="tag">#GitHub</a>
           
             <a href="/tags/Hexo/" rel="tag">#Hexo</a>
           
@@ -295,7 +389,7 @@
           <div class="comments" id="comments">
             
               <div class="ds-thread" data-thread-key="2015/10/01/hexo-blog/"
-                   data-title="用hexo搭建blog" data-url="http://yoursite.com/2015/10/01/hexo-blog/">
+                   data-title="用hexo+GitHub快速搭建个人博客" data-url="http://yoursite.com/2015/10/01/hexo-blog/">
               </div>
             
           </div>
@@ -377,7 +471,7 @@
           <div class="post-toc">
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#环境准备"><span class="nav-number">1.</span> <span class="nav-text">环境准备</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#安装主题"><span class="nav-number">2.</span> <span class="nav-text">安装主题</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#发布到Github"><span class="nav-number">3.</span> <span class="nav-text">发布到Github</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#个人域名"><span class="nav-number">4.</span> <span class="nav-text">个人域名</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#写文章"><span class="nav-number">5.</span> <span class="nav-text">写文章</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#开始之前：在GitHub上建立博客空间"><span class="nav-number">1.</span> <span class="nav-text">开始之前：在GitHub上建立博客空间</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#一、环境准备"><span class="nav-number">2.</span> <span class="nav-text">一、环境准备</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-程序安装"><span class="nav-number">2.1.</span> <span class="nav-text">1.程序安装</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-配置SSH_keys公钥"><span class="nav-number">2.2.</span> <span class="nav-text">2.配置SSH  keys公钥</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#二、安装HEXO"><span class="nav-number">3.</span> <span class="nav-text">二、安装HEXO</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#三、安装主题"><span class="nav-number">4.</span> <span class="nav-text">三、安装主题</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#四、设置主题/站点/插件"><span class="nav-number">5.</span> <span class="nav-text">四、设置主题/站点/插件</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#五、发布到Github"><span class="nav-number">6.</span> <span class="nav-text">五、发布到Github</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#六、个人域名"><span class="nav-number">7.</span> <span class="nav-text">六、个人域名</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-_购买域名"><span class="nav-number">7.1.</span> <span class="nav-text">1. 购买域名</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-_绑定域名"><span class="nav-number">7.2.</span> <span class="nav-text">2. 绑定域名</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#七、写文章"><span class="nav-number">8.</span> <span class="nav-text">七、写文章</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#八、进阶设置"><span class="nav-number">9.</span> <span class="nav-text">八、进阶设置</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#九、相关链接"><span class="nav-number">10.</span> <span class="nav-text">九、相关链接</span></a></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator"></div>
